@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FraudGuard Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🛡️ FraudGuard</h1>
+        <p>Real-time Credit Card Fraud Detection</p>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="stats">
+        <div class="stat-card">
+            <h2 id="total-transactions">0</h2>
+            <p>Total Transactions</p>
+        </div>
+        <div class="stat-card">
+            <h2 id="total-alerts">0</h2>
+            <p>Fraud Alerts</p>
+        </div>
+        <div class="stat-card">
+            <h2 id="total-flagged">0</h2>
+            <p>Flagged Transactions</p>
+        </div>
+    </section>
+
+    <!-- Simulate Transaction -->
+    <section class="simulate">
+        <h3>Simulate Transaction</h3>
+        <div class="form">
+            <input type="number" id="amount" placeholder="Amount (£)" />
+            <input type="text" id="merchant" placeholder="Merchant" />
+            <input type="text" id="location" placeholder="Location" />
+            <button onclick="submitTransaction()">Submit Transaction</button>
+        </div>
+    </section>
+
+    <!-- Alerts Panel -->
+    <section class="panel">
+        <h3>🚨 Fraud Alerts</h3>
+        <div id="alerts-list">
+            <p class="empty">No alerts yet</p>
+        </div>
+    </section>
+
+    <!-- Transactions Panel -->
+    <section class="panel">
+        <h3>💳 Recent Transactions</h3>
+        <div id="transactions-list">
+            <p class="empty">No transactions yet</p>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
